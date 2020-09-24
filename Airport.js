@@ -1,14 +1,24 @@
 class Airport {
     static airports = []
+
     constructor({name}) {
         this.name = name
         this.planes = []
-        this.constructor.airports = 
+        this.constructor.airports.push(this)
        
     }
-    addPlane(Plane){
-        this.planes.push(Plane)
-        this.planes.location = this.name
+    addPlane(plane){
+        plane.setLocation(this.name)
+        this.planes.push(plane)
+    }
+
+
+    takeOff(Plane) {
+        const index = this.planes.indexOf(plane)
+        this.planes.splice(index,1)
+        const destinationAirport = Airport.airports.find(airport =>airport.name === plane.destination) 
+        console.log(destinationAirport)
+        destinationAirport.addPlane(plane)
     }
 }
 

@@ -15,17 +15,19 @@ describe('Airport', function () {
     expect(airport.planes.length).toBe(3)
     expect(airport.planes[0].destination).toBe('Dublin')
  })
+
  test ('each airport knows about all the others', function () {
+    expect(Airport.airports.length).toBe(1)
+    const tenerife = new Airport({name: "Tenerife"}) 
     expect(Airport.airports).toBeTruthy()
-    const airport = new Airport({name: "Heathrow"}) 
-    const airport = new Airport({name: "Dublin"}) 
-    expect(Airport.airports[0]).toBe('Heathrow')
-    expect(Airport.airports[1]).toBe('Dublin')
+    // expect(Airport.airports).toBe(2)
+  
  })   
 
  test('an airport has plane', () => {
-     const plane1 = new Plane()
+     const plane1 = new Plane({destination:"Florida"})
      const [Heathrow, Dublin] = Airport.airports
+     Heathrow.addPlane(plane1)
      expect(plane1.location).toBe('Heathrow')
 
  })
