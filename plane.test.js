@@ -1,0 +1,31 @@
+// const { TestScheduler } = require('jest')
+const Bag = require('./Bag')
+const Passenger = require('./Passenger')
+const Plane= require('./Plane')
+
+describe('Plane', function () {
+    test('has a destination', function () {
+        const flight = new Plane({destination:"Orlando International"})
+        expect(flight.destination).toEqual("Orlando International")
+    })
+    test('has boarded passengers', function () {
+        const plane = new Plane({destination:"Orlando International"})
+        const calltoboard = new Passenger({name: 'Gemma'})
+        plane.boardPassenger(calltoboard)
+        expect(plane.boarded.length).toBe(1)
+    })
+    test('has boarded passengers', function () {
+        const plane = new Plane({destination:"Tenerife"})
+        const calltoboard1 = new Passenger({name: 'Gemma'})
+        const calltoboard2 = new Passenger({name: 'Daniel'})
+        const calltoboard3 = new Passenger({name: 'Dommie'})
+        const calltoboard4 = new Passenger({name: 'Kevin'})
+        const calltoboard5 = new Passenger({name: 'Julie'})
+        plane.boardPassenger(calltoboard1)
+        plane.boardPassenger(calltoboard2)
+        plane.boardPassenger(calltoboard3)
+        plane.boardPassenger(calltoboard5)
+        plane.boardPassenger(calltoboard5)
+        expect(plane.boarded.length).toBe(5)
+    })
+})

@@ -1,0 +1,17 @@
+{
+  "name": "airport",
+  "version": "1.0.0",
+  "description": "airport procedures",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "keywords": [
+    "testing"
+  ],
+  "author": "gdruce",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
