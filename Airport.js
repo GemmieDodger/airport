@@ -26,7 +26,6 @@ class Airport {
         const index = this.planes.indexOf(plane)
         this.planes.splice(index,1)
         const destinationAirport = Airport.airports.find(airport =>airport.name === plane.destination) 
-        console.log(destinationAirport)
         destinationAirport.addPlane(plane)
     }
 

@@ -1,0 +1,28 @@
+[{
+    "departure":"10:00",
+    "capacity":50,
+    "company":"Shuttles-R-Us",
+    "driver":"Toby",
+    "destination":"Train Station"
+},
+{
+    "departure":"12:00",
+    "capacity":50,
+    "company":"Shuttles-R-Us",
+    "driver":"Maggie",
+    "destination":"Terminal"
+},
+{
+    "departure":"14:00",
+    "capacity":20,
+    "company":"Shuttles-R-Us",
+    "driver":"Martha",
+    "destination":"Bus Stop"
+},
+{
+    "departure":"14:30",
+    "capacity":50,
+    "company":"Shuttles-R-Us",
+    "driver":"Peter",
+    "destination":"Car Park"
+}]

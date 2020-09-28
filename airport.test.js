@@ -19,8 +19,7 @@ describe('Airport', function () {
  test ('each airport knows about all the others', function () {
     expect(Airport.airports.length).toBe(1)
     const tenerife = new Airport({name: "Tenerife"}) 
-    expect(Airport.airports).toBeTruthy()
-    console.log(Airport.airports)    
+    expect(Airport.airports).toBeTruthy() 
     expect(Airport.airports.length).toBe(2)
  })   
 
@@ -43,7 +42,6 @@ describe('Airport', function () {
       const plane = new Plane({destination:'Lanzarote'})
       // plane.setDestination(airport2.name)
       airport1.addPlane(plane)
-      console.log(Airport.airports)
       expect(plane.location).toEqual('Gatwick')
       expect(plane.destination).toEqual('Lanzarote')
       airport1.takeOff(plane)

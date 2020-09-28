@@ -1,4 +1,5 @@
 class Plane {
+    
     constructor({destination}) {
         this.destination = destination
         this.boarded = []
@@ -11,6 +12,7 @@ class Plane {
     setDestination(destination) {
     this.destination = destination
     }
+    
     setLocation(location){
         this.location = location
     }
